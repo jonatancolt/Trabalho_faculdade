@@ -1,4 +1,4 @@
-body{
+body {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -15,19 +15,23 @@ body{
     font-family: arial;
     display: flex;
     justify-content: center;
-    display: flex;
     font-size: 20px;
     color: #7b7b7b;
 }
 
+.myhamburguer {
+    margin-top: 0;
+    font-size: 10px;
+    color: wheat;
+}
 .epigrafe {
     text-align: center;
-    margin: 80px auto; /* Centraliza verticalmente */
+    margin: 80px auto;
     letter-spacing: 5px;
     font-family: arial;
-    font-size: 20px;
+    font-size: 30px;
     color: #7b7b7b;
-    max-width: 90%; /* Limita a largura em telas grandes */
+    max-width: 90%;
 }
 
 .epigrafe2 {
@@ -35,46 +39,52 @@ body{
     margin-top: 20px;
     letter-spacing: 15px;
     font-family: arial;
-    display: flex;
-    justify-content: center;
-    display: flex;
     font-weight: bold;
-    color: #7b7b7b;
+    color: #222;
+    font-size: 40px;
 }
 
 /* Botão Home (clique aqui) */
 .btn {
-    color: #222;
-    position: relative;
-    left: 750px;
-   
-    background-color: gray;
-    text-decoration: none;
     font-size: 30px;
-    border-radius: 10px;
-    height: 45px;
+    color: #222;
+    border-radius: 40px;
+    width: 300px;
+    background-color: aliceblue;
     text-align: center;
-    letter-spacing: 10px;
     cursor: pointer;
+    letter-spacing: 5px;
+    height: 45px;
+    position: relative;
+    left: 750px;   
+}
+
+.btn:hover {
+    background-color: #7b7b7b;
+    transition: 0.3s;
 }
 
 /* Menu */
 .menu {
     width: 100%;
     height: 50px;
-    left: 500px;
     background-color: #222;
     font-family: arial;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .menu ul {
     list-style: none;
-    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
 }
 
 .menu ul li {
-    width: 150px;
-    float: left;
+    text-align: center;
 }
 
 .menu .linker {
@@ -82,49 +92,27 @@ body{
     display: block;
     text-decoration: none;
     color: yellow;
-    text-align: center;
     background-color: #222;
     cursor: pointer;
-}
-
-.menu ul ul {
-    position: absolute;
-    visibility: hidden;
-}
-
-.menu ul li:hover ul {
-    visibility: visible;
 }
 
 .menu a:hover {
     color: #ff00ff;
 }
 
-.menu ul ul li {
-    float: none;
-    border-bottom: 1px solid yellowgreen;
-}
-
-.menu ul ul li a {
-    background-color: darkblue;
-}
-
 label[for="checar"] {
     background-color: darkblue;
     color: red;
-    font-size: 20px;
+    font-size: 30px; /* Ajuste para maior proporcionalidade */
     padding: 10px;
     font-family: arial;
     width: 50px;
     text-align: center;
     cursor: pointer;
+    display: none; /* Ocultar por padrão */
 }
 
 #checar {
-    display: none;
-}
-
-label[for="checar"] {
     display: none;
 }
 
@@ -135,25 +123,33 @@ label[for="checar"] {
         display: block;
     }
 
-    /* O menu ficará fora da tela inicialmente */
+    /* O menu ficará oculto fora da tela inicialmente */
     .menu {
-        margin-left: -100%;
-        transition: margin-left 0.5s ease;
+        display: none;
+        width: 100%;
+        opacity: 0; /* Para a transição suave */
+        transition: opacity 0.5s ease; /* Transição para a opacidade */
+        position: absolute; /* Para sobrepor o conteúdo */
+        top: 50px; /* Posicionar abaixo do botão */
     }
 
-    /* Quando o checkbox estiver marcado, o menu volta para a tela */
+    /* Quando o checkbox estiver marcado, o menu aparece com opacidade */
     #checar:checked ~ .menu {
-        margin-left: 0;
+        display: flex;
+        justify-content: space-around;
+        opacity: 1; /* Exibe o menu */
     }
 
-    /* Ajustar o layout do menu para telas menores */
+    /* Ajustar o layout do menu para horizontal em telas menores */
     .menu ul {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
     }
 
     .menu ul li {
-        width: 100%;
+        width: auto;
         text-align: center;
     }
 
@@ -183,6 +179,7 @@ label[for="checar"] {
         margin: 20px auto;
         display: block;
         bottom: 0; /* Remover o espaçamento desnecessário */
+        text-decoration: none;
     }
 }
 
@@ -201,3 +198,5 @@ label[for="checar"] {
 .myfot {
     margin: 10px 0;
 }
+
+

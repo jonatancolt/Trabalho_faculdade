@@ -1,0 +1,34 @@
+
+
+.important {
+    color: #7b7b7b !important;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 15px;
+    display: block;
+    background-color: #222;
+}
+
+.containerDead{
+    max-width: 900px;
+}
+
+.textDead{
+    background-color: 1px solid black;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 20px;
+    justify-content: center;
+    margin: 80px auto; /* Centraliza verticalmente */
+    max-width: 90%; /* Limita a largura em telas grandes */
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.myh1dead {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 40px;
+}

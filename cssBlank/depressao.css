@@ -1,7 +1,9 @@
+
+
 .important {
     color: #7b7b7b !important;
     font-weight: bolder;
-    cursor: pointer !important;
+    cursor: pointer;
     padding: 15px;
     display: block;
     background-color: #222;
