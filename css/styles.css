@@ -100,45 +100,12 @@ body {
     color: #ff00ff;
 }
 
-label[for="checar"] {
-    background-color: darkblue;
-    color: red;
-    font-size: 30px; /* Ajuste para maior proporcionalidade */
-    padding: 10px;
-    font-family: arial;
-    width: 50px;
-    text-align: center;
-    cursor: pointer;
-    display: none; /* Ocultar por padrão */
-}
-
 #checar {
     display: none;
 }
 
 /* Responsividade */
 @media(max-width: 800px) {
-    /* Exibir o ícone de menu */
-    label[for="checar"] {
-        display: block;
-    }
-
-    /* O menu ficará oculto fora da tela inicialmente */
-    .menu {
-        display: none;
-        width: 100%;
-        opacity: 0; /* Para a transição suave */
-        transition: opacity 0.5s ease; /* Transição para a opacidade */
-        position: absolute; /* Para sobrepor o conteúdo */
-        top: 50px; /* Posicionar abaixo do botão */
-    }
-
-    /* Quando o checkbox estiver marcado, o menu aparece com opacidade */
-    #checar:checked ~ .menu {
-        display: flex;
-        justify-content: space-around;
-        opacity: 1; /* Exibe o menu */
-    }
 
     /* Ajustar o layout do menu para horizontal em telas menores */
     .menu ul {
@@ -179,7 +146,7 @@ label[for="checar"] {
         margin: 20px auto;
         display: block;
         bottom: 0; /* Remover o espaçamento desnecessário */
-        text-decoration: none;
+        
     }
 }
 

@@ -6,3 +6,15 @@
     display: block;
     background-color: #222;
 }
+
+.container{
+    display: flex;
+    gap: 15px;
+    margin-left: 35PX;
+}
+
+@media(max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+}
